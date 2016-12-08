@@ -2,11 +2,14 @@ print("Welcome to PumaPix")
 print("What are your 5 favorite netfix shows?")
 showlist = []
 x = 1
-while x <= 5:
+while x <= 100000000:
 	print("Enter a show name:")
-	showlist.append(raw_input())
+	addshow = raw_input()
+	showlist.append(addshow)
 	x = x + 1
-	 
+	if addshow == "done":
+		showlist.remove("done")
+		break
 y = 1
 while y <= 5:
 	for show in showlist:
