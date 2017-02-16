@@ -4,7 +4,7 @@ class Player(object):
 		self.age = age
 		self.goals = goals
 	def getStats(self, name, age, goals):
-		summary = "The player," + self.name + ", age " + self.age + ",has total goals of " + self.goals + "."
+		summary = "Name: " + self.name + "\n" + "Age: " + self.age + "\n" + "Goals: " + self.goals
 		return summary
 
 
@@ -16,6 +16,7 @@ while keepRunning:
 	print("What would you like to do?")
 	print("(1)Add a Player")
 	print("(2)Print Players")
+	print("(0)End Code")
 	answer = input()
 	if answer == 1:
 		print("What is their name?")
@@ -30,3 +31,5 @@ while keepRunning:
 	elif answer == 2:
 		for p in myPlayers:
 			print(p.getStats(name, age, goals))
+	elif answer == 0:
+		keepRunning = False
