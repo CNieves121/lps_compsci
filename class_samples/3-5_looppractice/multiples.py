@@ -6,6 +6,7 @@ multiple = 0
 number = 1
 while number <= ceiling:
 	number = ognum * multiple
+	#Move this one line under the next to fix the having to subtract 1?
 	multiple = multiple + 1
 	print(str(ognum) + " times " + str(multiple - 1) + " is equal to " + str(number))
 	if number  >= (ceiling + 1):

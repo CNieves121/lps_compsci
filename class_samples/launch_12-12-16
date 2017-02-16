@@ -1,0 +1,12 @@
+print("What number would you like to test?")
+n = int(raw_input())
+div_num = 2
+
+while div_num < n:
+	if n % div_num == 0:
+		print('Nope, it\'s not.')
+		exit()
+	div_num = div_num + 1
+
+# if we get this far without exiting...
+print('Yup, it is!')
