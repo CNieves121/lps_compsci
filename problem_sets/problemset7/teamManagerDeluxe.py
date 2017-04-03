@@ -1,3 +1,4 @@
+myPlayers = []
 class Player(object):
 	def __init__(self, name, age, goals, position):
 		self.name = name
@@ -7,27 +8,29 @@ class Player(object):
 	def getStats(self, name, age, goals):
 		summary = "Name: " + self.name + "\n" + "Age: " + self.age + "\n" + "Goals: " + self.goals + "/n" + "Position: " + self.position
 		return summary
-	def saveTeam(playerList, filename):
+	def saveTeam(self, filename):
 # open the file
 		myFile = open(filename, "w")
 # write to the file
 		for a in myPlayers:
-			myFile.write(self.name, self.age, self.goals, self.position)
+			myFile.write(a.name + " " + a.age + " " + a.goals + " " + a.position)
 # close the file
 		myFile.close()
-# placeholder - delete once the function is complete		
+		
 	def loadTeam(filename):
 # create empty list
 		myPlayers = []
 # open the file
-		myFIle = open(filename, "r")
+		myFile = open(filename, "r")
 		
+		splitThing = myFile.split(" ")
+		while mySplit != "":
+			mySplit = splitThing.split("")
+			myPlayers.append(Player(str(splitThing[0]), str(splitThing[1]), str(splitThing[2]), str(splitThing[3]) +"/n"))
+			splitThing = myFile.split("")
 # close the file
 		myFile.close()
-# return the completed list
-# placeholderdelete once the function is complete
-
-myPlayers = []
+		return myPlayers
 
 keepRunning = True
 while keepRunning:
@@ -45,7 +48,7 @@ while keepRunning:
 		print("(2)Print Player")
 		print("(3)Save Players")
 		answer = raw_input()
-#Add Player		
+	#Add Player		
 		if answer == "1":
 			print("Okay, enter their name, age, goals, and position.")
 			print("What is their name?")
@@ -59,11 +62,11 @@ while keepRunning:
 			myPlayer = Player(name, age, goals, position)
 			print("It has bee added")
 			myPlayers.append(myPlayer)
-#Prints Players
+	#Prints Players
 		elif answer == "2":
 			for p in myPlayers:
 				print(p.getStats(name, age, goals))
-#Save Players
+	#Save Players
 		elif answer == "3":
 			filename = raw_input()
 			for p in myPlayers:
@@ -71,5 +74,7 @@ while keepRunning:
 #Open Existing File
 	elif answer == "2":
 		print("What is the name of the file that you want to open? Enter the whole name inlcuding a .tmd at the end.")
+		filename = raw_input()
+		myPlayers = loadTeam(filename)
 	else:
                 keepRunning = False
