@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rooster Teeth</title>
+    <style>
+      body {
+        background-image: url("http://s3.roosterteeth.com/images/Grove150c72013d257c.jpg");
+        background-position: center;
+        color: white; 
+      }
+      a:visited {
+        color: yellow;  
+      }
+      a:hover {
+        color: pink;  
+      }
+      
+
+
+    </style>
+  </head>
+  <body>
+    <h1>About</h1>
+     <p>Rooseterteeth is an internet entertainment based company that was founded in Austin, Texas by the following people: <br> <a href = "http://roosterteeth.com/user/burnie">Burnie Burns</a>, <a href = "http://roosterteeth.com/user/matt">Matt Hulum</a>, <a href = "http://roosterteeth.com/user/geoff">Geoff Ramsey</a>.
+     </p>
+     <img src= "http://vignette2.wikia.nocookie.net/roosterteeth/images/e/e9/Burnie-burns.jpg/revision/latest?cb=20150327055806", style="width:120px;height:120px;">
+     <img src= "http://s3.amazonaws.com/cdn.roosterteeth.com/uploads/images/90eec7c0-3ae5-4032-8ebf-9928d8750b74/md/6-1438834797638-matt_headshot-002a.jpg"style="width:120px;height:120px;">
+     <img src= "http://i2.kym-cdn.com/entries/icons/facebook/000/006/819/GeoffHappy.jpg"style="width:120px;height:120px;">
+
+
+    <h1>Subsidiaries</h1>
+     <h3>Achievement Hunter</h3>
+     <p>The first branch to come from Rooster Teeth, this part of the company mainly focuses on playing video games and providing commentary</p>
+    <h3>FunHaus</h3>
+     <p>The first spin off of Achievement Hunter, this LA based group provides entertainment through a variety of series they make.</p>
+    <h3>Screw Attack</h3>
+     <p>One of the newer additions to the Rooster Teeth family, this group makes a lot of different shows. One of which, Death Battle, pits two unlikeley foes against eachother.</p>
+  </body>
+</html>
